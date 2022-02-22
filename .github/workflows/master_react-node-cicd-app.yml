@@ -54,4 +54,4 @@ jobs:
           app-name: 'react-node-cicd-app'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_34DAEAA7E3C44A02B6511BF1DC8225BA }}
-          package: ./server
+          package: .
