@@ -34,6 +34,7 @@ app.get("*", (req, res) => {
 });
 
 app.all("*", async (_, res) => {
+  cloneDeep({});
   throw new NotFoundError();
 });
 
