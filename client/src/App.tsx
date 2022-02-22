@@ -1,4 +1,6 @@
 import React, { Suspense } from "react";
+import { ToastContainer } from 'react-toastify';
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Login, Register, Home } from "./pages";
 import { Navbar } from "./components";
@@ -16,6 +18,7 @@ function App() {
           </Routes>
         </Suspense>
       </BrowserRouter>
+      <ToastContainer />
     </div>
   );
 }
