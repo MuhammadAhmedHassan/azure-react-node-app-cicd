@@ -1,5 +1,5 @@
 import express from "express";
-import cloneDeep from 'lodash/cloneDeep'
+import { cloneDeep } from 'lodash'
 import "express-async-errors";
 import { json } from "body-parser";
 import cookieSession from "cookie-session";

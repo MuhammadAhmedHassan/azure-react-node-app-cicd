@@ -4,7 +4,6 @@ import { config } from "./config/config";
 import { app } from "./app";
 
 dotenv.config();
-console.log("working");
 
 const start = async () => {
   const { MONGO_URI, PORT } = config();
