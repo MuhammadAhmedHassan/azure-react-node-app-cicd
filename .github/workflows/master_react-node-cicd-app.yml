@@ -26,14 +26,14 @@ jobs:
           cd ./server && npm install
           npm run test:ci
           cd ../client && npm install && cd ../server
-          npm run build --if-present
-          rm -rf node_modules
+          npm run build:client --if-present
+          rm -rf node_modules && cd ../client && rm -rf node_modules && cd ..
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: .
+          path: ./server
 
   deploy:
     runs-on: ubuntu-latest
