@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 import { appAxios } from "../utils/app-axios";
 
 function Login() {
@@ -21,6 +22,7 @@ function Login() {
 
     try {
       await appAxios.post("/users/login", credentials);
+      toast("Welcome");
       navigation("/");
     } catch (error) {
       console.log(error);
