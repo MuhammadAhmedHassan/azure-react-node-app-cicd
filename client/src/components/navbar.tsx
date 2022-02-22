@@ -1,11 +1,6 @@
 import React from "react";
 import { Link, LinkProps, useMatch, useResolvedPath } from "react-router-dom";
 
-interface UserPayload {
-  id: string;
-  email: string;
-  iat: number;
-}
 
 export function Navbar() {
   function CustomLink({ children, to, ...props }: LinkProps) {
